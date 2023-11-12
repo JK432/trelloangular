@@ -1,0 +1,13 @@
+.card {
+  height: 80vh;
+}
+
+.cardimg {
+  height: 80vh;
+  overflow: hidden;
+}
+
+img {
+  object-fit: cover;
+}
+

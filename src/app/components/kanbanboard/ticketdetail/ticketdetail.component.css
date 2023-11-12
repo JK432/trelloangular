@@ -1,0 +1,37 @@
+.text {
+  display: flex;
+  justify-items: start;
+  justify-content: start;
+
+}
+
+.container {
+  padding: 20px;
+}
+
+.title {
+  font-size: 25px;
+  color: blueviolet;
+}
+
+.time{
+  display: flex;
+  font-size: 15px;
+  color:rgb(101, 101, 101);
+
+}
+.desc{
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.status{
+margin-left: 10px;
+font-size: 15px;
+  color: red;
+}
+.created_by{
+  font-size: 15px;
+}
+.assigned_to {
+  font-size: 15px;
+}

@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="title">{{ticket.title}} </div>
+   <div class="time"> {{ticket.created_time}}<div class="status">
+    <div *ngIf="ticket.Status==0">To Do</div>
+    <div *ngIf="ticket.Status==1">Doing</div>
+    <div *ngIf="ticket.Status==2">Doing</div>
+  </div>
+ </div>
+  <div class="desc">{{ticket.desc}}</div>
+  <div class="created_by">{{"Created By : "+created_by.email}}</div>
+  <div class="assignee">{{"Assigned To : "+assignee.email}}</div>
+
+</div>

@@ -1,0 +1,58 @@
+<app-a-nav></app-a-nav>
+<div cdkDropListGroup class="container">
+  <div class="example-container">
+    <div class="title">To do</div>
+
+    <div id=0 cdkDropList [cdkDropListData]="todos" class="example-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of todos;" cdkDrag >
+        <div (click)="opendetails(item)">{{item.title}}</div>
+        <div class="functions">
+          <div class="time">{{ item.created_time| timeAgo }}</div>
+          <div class="size"></div>
+          <i class="fa fa-solid fa-pencil icon" *ngIf="user.role == 0" (click)="openedit(item)"></i>
+
+        </div>
+      </div>
+    </div>
+    <div class="button" *ngIf="user.role==0" (click)="openadd()">Add Ticket</div>
+  </div>
+
+  <div class="example-container">
+    <div class="title">Doing</div>
+
+    <div id=1 cdkDropList [cdkDropListData]="doings" class="example-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of doings;" cdkDrag >
+        <div (click)="opendetails(item)">{{item.title}}</div>
+        <div class="functions" >
+          <div class="time">{{ item.created_time| timeAgo }}</div>
+          <div class="size"></div>
+          <i class="fa fa-solid fa-pencil icon" *ngIf="user.role == 0" (click)="openedit(item)"></i>
+
+        </div>
+      </div>
+    </div>
+    <div class="button" *ngIf="user.role==0" (click)="openadd()">Add Ticket</div>
+  </div>
+
+  <div class="example-container">
+    <div class="title">Done</div>
+
+    <div id=2 cdkDropList [cdkDropListData]="dones" class="example-list" (cdkDropListDropped)="drop($event)">
+
+      <div class="example-box" *ngFor="let item of dones;" cdkDrag >
+        <div class="task" (click)="opendetails(item)">{{item.title}}</div>
+
+        <div class="functions">
+          <div class="time">{{ item.created_time| timeAgo }}</div>
+          <div class="size"></div>
+          <i class="fa fa-solid fa-pencil icon" *ngIf="user.role == 0" (click)="openedit(item)"></i>
+
+        </div>
+
+      </div>
+
+
+    </div>
+    <div class="button" *ngIf="user.role==0" (click)="openadd()">Add Ticket</div>
+  </div>
+</div>
